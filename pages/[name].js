@@ -3,18 +3,27 @@ import data from '../data'
 import { useRouter } from 'next/router';
 import cuid from 'cuid';
 import { useEffect, useState } from 'react';
-export default function Main(p) {
-    const router = useRouter()
+export default function Main({ setLink }) {
+    const router = useRouter();
     const { name } = router.query;
+    useEffect(() => {
+        setLink("/error");
+    }, [])
     const [pic, setPic] = useState([])
+    const [picPhone, setPicPhone] = useState([])
     let NumberOfPhotos = 0;
     NumberOfPhotos = data[`${name}`]?.NumberOfPhotos;
     useEffect(() => {
         let items = [];
+        let itemsPhone = [];
         for (let i = 3; i <= NumberOfPhotos; i++) {
             items.push(<img key={cuid()} src={`/${name}/${i}.jpg`} alt={name} />)
         }
+        for (let i = 1; i <= NumberOfPhotos; i++) {
+            itemsPhone.push(<img key={cuid()} src={`/${name}/${i}.jpg`} alt={name} />)
+        }
         setPic(items)
+        setPicPhone(itemsPhone)
     }, [NumberOfPhotos])
     return (
         <div>
@@ -24,7 +33,7 @@ export default function Main(p) {
                 <meta name="description" content="yasin pic" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <button className="back_button" onClick={()=>router.back()}><img src="/back.png" alt="Back"/></button>  
+            <button className="back_button" onClick={() => router.push("/404")}><img src="/back.png" alt="Back" /></button>
             <div className="images desktop">
                 <div className="images_left">
                     <div className="name">
@@ -32,9 +41,9 @@ export default function Main(p) {
                         <h2>{data[name]?.lname}</h2>
                         <p>Dept of  {data[name]?.dept}</p>
                     </div>
-                    <img src={`${name}/1.jpg`} className="yasin_img_2" />
+                    <img src={`/${name}/1.jpg`} className="yasin_img_2" />
                 </div>
-                <img src={`${name}/2.jpg`} />
+                <img src={`/${name}/2.jpg`} />
 
             </div>
             <div className="pics desktop">
@@ -49,7 +58,7 @@ export default function Main(p) {
                     <p>Dept of  {data[name]?.dept}</p>
                 </div>
                 <div className="photo">
-                    {pic}
+                    {picPhone}
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@ const data = {
         fname: "Sahal",
         lname: "sajid",
         dept: "Mechanical Engineering",
-        NumberOfPhotos: 6,
+        NumberOfPhotos: 3,
     },
     shiyas: {
         fname: "shiyas",
@@ -36,7 +36,7 @@ const data = {
         dept: "Mechanical Engineering",
         NumberOfPhotos: 6,
     },
-    chnju: {
+    sinjul: {
         fname: "muhammed sinjul",
         lname: "ck",
         dept: "Mechanical Engineering",
@@ -58,7 +58,7 @@ const data = {
         fname: "abdul rayees",
         lname: "kc",
         dept: "Mechanical Engineering",
-        NumberOfPhotos: 1,
+        NumberOfPhotos: 6,
     },
     
     abin: {
@@ -71,6 +71,18 @@ const data = {
         fname: "selman",
         lname: "fariz pn",
         dept: "Mechanical Engineering",
+        NumberOfPhotos: 5,
+    },
+    raman: {
+        fname: "ananda raman",
+        lname: "c b",
+        dept: "civil engineering",
+        NumberOfPhotos: 6,
+    },
+    athif: {
+        fname: "athif",
+        lname: "SAL SAMAN",
+        dept: "electronics & instrumentation",
         NumberOfPhotos: 5,
     },
     // irshu: {
@@ -90,18 +102,6 @@ const data = {
     //     fname: "said muhammed sidnam",
     //     lname: "",
     //     dept: "mechanical engineering",
-    //     NumberOfPhotos: 0,
-    // },
-    // raman: {
-    //     fname: "ananda raman",
-    //     lname: "c bhaiju",
-    //     dept: "civil engineering",
-    //     NumberOfPhotos: 0,
-    // },
-    // athif: {
-    //     fname: "athif",
-    //     lname: "SAL SAMAN",
-    //     dept: "electronics & instrumentation",
     //     NumberOfPhotos: 0,
     // },
 

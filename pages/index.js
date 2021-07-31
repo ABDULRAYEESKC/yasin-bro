@@ -1,11 +1,18 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import cuid from 'cuid';
-import data from '../data'
-export default function Home() {
-  console.log()
+import data from '../data';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+export default function Home({ link }) {
+  const router = useRouter();
+  useEffect(() => {
+    if (link === "/error") {
+      router.push("/error");
+    }
+  }, [])
   return (
-    <>
+    <div className="main_bg">
       <Head>
         <title>Kade</title>
         <meta name="description" content="kade photos" />
@@ -32,6 +39,6 @@ export default function Home() {
           })
         }
       </div>
-    </>
+    </div>
   )
 }

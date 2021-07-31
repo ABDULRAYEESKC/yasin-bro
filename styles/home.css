@@ -49,6 +49,7 @@ img:hover {
     font-size: 3rem;
     font-family: 'Andada';
     text-transform: uppercase;
+    color: #849989;
 }
 
 .name_mob {
@@ -69,8 +70,8 @@ img:hover {
 
 .back_button img {
     height: 50px;
-    
 }
+
 .back_button img:hover {
     height: 50px;
     transform: scale(1.2);
