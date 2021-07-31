@@ -2,17 +2,30 @@ import Head from 'next/head';
 import data from '../data'
 import { useRouter } from 'next/router';
 import cuid from 'cuid';
-export default function Image(p) {
+import { useEffect, useState } from 'react';
+export default function Main(p) {
     const router = useRouter()
-    const { name } = router.query
+    const { name } = router.query;
+    const [pic, setPic] = useState([])
+    let NumberOfPhotos = 0;
+    NumberOfPhotos = data[`${name}`]?.NumberOfPhotos;
+    useEffect(() => {
+        let items = [];
+        for (let i = 3; i <= NumberOfPhotos; i++) {
+            items.push(<img key={cuid()} src={`/${name}/${i}.jpg`} alt={name} />)
+        }
+        setPic(items)
+    }, [NumberOfPhotos])
     return (
         <div>
+
             <Head>
                 <title>{name}</title>
                 <meta name="description" content="yasin pic" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="images mobile">
+            <button className="back_button" onClick={()=>router.back()}><img src="/back.png" alt="Back"/></button>  
+            <div className="images desktop">
                 <div className="images_left">
                     <div className="name">
                         <h1>{data[name]?.fname}</h1>
@@ -24,44 +37,20 @@ export default function Image(p) {
                 <img src={`${name}/2.jpg`} />
 
             </div>
-            {/* {
-               for (let index = 0; index < data.yasin.images.length; index++) {
-                   const element = array[index];
-                   
-               }       
-            } */}
-            <div className="pics mobile">
-                {
-                    data.yasin.images.map((img_src, index) => {
-                        console.log(index)
-                        return (
-                            <img key={cuid()} src={img_src} alt={img_src} />
-                        )
-                    }
-                    )
-                }
-
-
+            <div className="pics desktop">
+                {pic}
             </div>
 
 
 
-            <div className="desktop">
+            <div className="mobile">
                 <div className="name">
-                    <h1>YASIN</h1>
-                    <h1>MEHMOOD MK</h1>
-                    <p>Dept of Mechanical Engineering</p>
+                    <h1>{data[name]?.fname} {data[name]?.lname}</h1>
+                    <p>Dept of  {data[name]?.dept}</p>
                 </div>
-                {
-                    data.yasin.images.map((img_src, index) => {
-                        console.log(index)
-                        return (
-                            <img key={cuid()} src={img_src} alt={img_src} />
-                        )
-                    }
-                    )
-                }
-         
+                <div className="photo">
+                    {pic}
+                </div>
             </div>
         </div>
 

@@ -15,6 +15,7 @@ a {
 * {
   box-sizing: border-box;
   margin:0;
+  padding: 0;
 }
 
 .Main_Page img {
@@ -31,12 +32,19 @@ a {
 }
 .container{
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   place-content: center;
-  height: 100vh;
-  width: 100vw;
-  margin-left: 8vw;
+  min-height: 100vh;
+  min-width: 100vw;
+  /* margin-left: 8vw; */
+  padding-left: 8vw;
   row-gap: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
 }
 .home{
   height: 100vh;
@@ -44,4 +52,12 @@ a {
   background:red;
   display:grid;
   place-content: center;
+}
+.Name_main{
+  background:white;
+  width: 150px;
+  text-align: center;
+  height: 20px;
+  text-transform:uppercase;
+  border-radius:30px;
 }

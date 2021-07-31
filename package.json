@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "html": "next export"
+    "html": "next export",
+    "deploy":"netlify deploy --prod",
+    "dp":"yarn build && yarn html && yarn deploy"
   },
   "dependencies": {
     "cuid": "^2.1.8",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1"
+    "eslint-config-next": "11.0.1",
+    "netlify": "^8.0.0"
   }
 }
