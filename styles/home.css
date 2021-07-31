@@ -1,0 +1,85 @@
+.images{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around; 
+    margin-top: 20px;
+}
+.images img{
+    transition: transform .5s;
+    max-height: 60vh;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.pics{
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.pics img{
+    margin-top:100px;
+    transition: transform .5s;
+    max-height: 60vh;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+
+ img:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+.yasin_img_2{
+    height: 50vh;
+}
+.images_left{
+    display: grid;
+    justify-items: center;
+}
+.name{
+    margin-bottom: 10vh;
+    font-size:3rem;
+    font-family: 'Andada';
+
+}
+.name_mob{
+    margin-bottom: 10vh;
+    font-size:3vh;
+    font-family: 'Andada';
+}
+.desktop{
+    display:none;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile{
+        display:none;
+    }
+    .images_left{
+        flex-direction: column;
+    }
+    .images_mob{
+        display: flex;
+        width: 100vw;
+    }
+    .desktop img{
+        margin-bottom: 20px;    
+        border-radius: 50%;
+        transition: transform .5s;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .desktop img:hover {
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+    .desktop{
+        display:grid;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .name{
+        font-size:1rem;
+        font-family: 'Andada';
+    }
+  }
