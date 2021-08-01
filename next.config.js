@@ -3,5 +3,4 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   trailingSlash: true,
-  target: "serverless"
 }
