@@ -17,7 +17,7 @@ const data = {
         dept: "electronics & instrumentation",
         NumberOfPhotos: 6,
     },
-    shanu: {
+    shahan: {
         fname: "Shahan",
         lname: "KT",
         dept: "electronics & instrumentation",

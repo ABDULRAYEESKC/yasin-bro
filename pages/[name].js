@@ -2,6 +2,7 @@ import Head from 'next/head';
 import data from '../data'
 import { useRouter } from 'next/router';
 import cuid from 'cuid';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 export default function Main({ setLink }) {
     const router = useRouter();
@@ -17,10 +18,10 @@ export default function Main({ setLink }) {
         let items = [];
         let itemsPhone = [];
         for (let i = 3; i <= NumberOfPhotos; i++) {
-            items.push(<img key={cuid()} src={`/${name}/${i}.jpg`} alt={name} />)
+            items.push(<Image key={cuid()} src={require(`./images/${name}/${i}.jpg`)} alt={name} />)
         }
         for (let i = 1; i <= NumberOfPhotos; i++) {
-            itemsPhone.push(<img key={cuid()} src={`/${name}/${i}.jpg`} alt={name} />)
+            itemsPhone.push(<Image key={cuid()} src={require(`./images/${name}/${i}.jpg`)} alt={name} />)
         }
         setPic(items)
         setPicPhone(itemsPhone)

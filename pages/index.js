@@ -4,6 +4,7 @@ import cuid from 'cuid';
 import data from '../data';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import Image from 'next/image';
 export default function Home({ link }) {
   const router = useRouter();
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function Home({ link }) {
                 <Link href={`/${name}`}>
                   <a >
                     <div className="Main_Page">
-                      <img src={`/${name}/1.jpg`} alt={name} />
+                      <Image src={require(`./images/${name}/1.jpg`)} alt={name} />
                     </div>
                     <div className="Name_main">
                       <h3 >{name}</h3>
