@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>Kaade</title>
         <meta charset="utf-8" />
         <meta name="Description" CONTENT="Author:Abin Joseph, Illustrator: Kaade, Category: Fun" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

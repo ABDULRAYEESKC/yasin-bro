@@ -14,7 +14,7 @@ export default function Home({ link }) {
   return (
     <div className="main_bg">
       <Head>
-        <title>Kade</title>
+        <title>Kaade</title>
         <meta name="description" content="kade photos" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
