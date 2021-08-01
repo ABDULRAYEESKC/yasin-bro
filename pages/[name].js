@@ -19,10 +19,15 @@ export default function Main({ setLink }) {
         let items = [];
         let itemsPhone = [];
         for (let i = 3; i <= NumberOfPhotos; i++) {
-            items.push(<img key={cuid()} src={`/${name}/${i}.jpg`} alt={`${name} images ${i}`} />)
+            items.push(
+                <img key={cuid()} src={`/${name}/${i}.jpg`} alt={`${name} images ${i}`} />
+            )
         }
         for (let i = 1; i <= NumberOfPhotos; i++) {
-            itemsPhone.push(<img key={cuid()} src={`/${name}/${i}.jpg`} alt={`${name} images ${i}`} />)
+            itemsPhone.push(
+                <img key={cuid()} src={`/${name}/${i}.jpg`} alt={`${name} images ${i}`} />
+
+            )
         }
         setPic(items)
         setPicPhone(itemsPhone)
@@ -45,7 +50,7 @@ export default function Main({ setLink }) {
                     </div>
                     <img src={`/${name}/1.jpg`} alt={`${name} image 1`} className="yasin_img_2" />
                 </div>
-                <img src={`/${name}/2.jpg`} alt={`${name} image 2`} />
+                <img src={`/${name}/2.jpg`} alt={`${name} image 1`} className="yasin_img_2" />
 
             </div>
             <div className="pics desktop">

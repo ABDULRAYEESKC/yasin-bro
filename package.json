@@ -11,12 +11,13 @@
     "html": "next export",
     "deploy": "netlify deploy --prod",
     "image": "node compressImages",
-    "dp": "yarn image && yarn build && yarn html && yarn deploy"
+    "dp": "yarn build && yarn html && yarn deploy"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^3.7.1",
     "cuid": "^2.1.8",
     "gifsicle": "^5.2.0",
+    "jpegtran-bin": "^5.0.2",
     "next": "11.0.1",
     "pngquant-bin": "^6.0.0",
     "react": "17.0.2",

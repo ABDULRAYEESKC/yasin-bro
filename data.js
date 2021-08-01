@@ -52,7 +52,7 @@ const data = {
         fname: "ijas",
         lname: "ahammed",
         dept: "electronics & instrumentation",
-        NumberOfPhotos: 6,
+        NumberOfPhotos: 4,
     },
     rayees: {
         fname: "abdul rayees",
