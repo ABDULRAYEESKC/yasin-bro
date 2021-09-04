@@ -3,7 +3,7 @@ const data = {
         fname: "YASIN",
         lname: "MEHMOOD MK",
         dept: "Mechanical Engineering",
-        NumberOfPhotos: 8,
+        NumberOfPhotos: 9,
     },
     shamil: {
         fname: "shamil",
