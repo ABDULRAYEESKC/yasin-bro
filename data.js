@@ -85,16 +85,11 @@ const data = {
         dept: "electronics & instrumentation",
         NumberOfPhotos: 5,
     },
-    raeesmomo: {
-
+    raees: {
         fname: "MUHAMMED",
-
         lname: "RAEES",
-
         dept: "Mechanical Engineering",
-
         NumberOfPhotos: 5,
-
     },
     // irshu: {
     //     fname: "mohammed irshad",
