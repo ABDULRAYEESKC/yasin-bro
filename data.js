@@ -91,7 +91,13 @@ const data = {
         dept: "Mechanical Engineering",
         NumberOfPhotos: 5,
     },
-    // irshu: {
+
+    ashiq: {ashiq: {
+        fname: "MUHAMMAD ASHIQ P",
+        lname: "ASHIQ",
+        dept: "AVIATION",
+        NumberOfPhotos: 2,
+    },
     //     fname: "mohammed irshad",
     //     lname: "cm",
     //     dept: "mechanical engineering",
